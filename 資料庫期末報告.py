@@ -7,9 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1emuyKzcNm9QX6dTuiL23DvyA3G7Mmjrb
 """
 
-!pip install streamlit
 
-!pip install nba_api plotly
 
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
@@ -71,10 +69,3 @@ Original file is located at
 #     st.dataframe(df_compare)
 #     st.success("資料抓取成功！")
 
-!wget -q -O - ipv4.icanhazip.com
-
-!pkill -f streamlit
-!streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false &>/dev/null &
-
-from google.colab import output
-output.serve_kernel_port_as_window(8501)
